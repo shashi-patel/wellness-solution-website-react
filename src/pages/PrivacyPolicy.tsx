@@ -7,13 +7,13 @@ export default function PrivacyPolicy() {
                 <div className="max-w-4xl mx-auto px-4 md:px-6">
 
                     {/* Title */}
-                    <h1 className="text-3xl md:text-4xl font-bold mb-6">
+                    <h1 className="pt-10 text-3xl md:text-4xl font-bold mb-6">
                         Privacy Policy
                     </h1>
 
                     <p className="text-gray-600 mb-10">
                         This Privacy Policy explains what information is collected about you,
-                        how we collect it, and the purposes for which it is used. Wellness
+                        how we collect it and the purposes for which it is used. Wellness
                         Solution is committed to protecting your privacy and personal data.
                     </p>
 
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
                         <p>
                             We do not share any personal information with third parties.
                             Please take a moment to familiarize yourself with our privacy
-                            practices, and feel free to contact us if you have any questions
+                            practices and feel free to contact us if you have any questions
                             or concerns.
                         </p>
                     </Section>
@@ -35,11 +35,11 @@ export default function PrivacyPolicy() {
                             items={[
                                 {
                                     title: "Account Management",
-                                    desc: "We collect details such as your name, email address, and mobile number to create and manage your account, including login and registration.",
+                                    desc: "We collect details such as your name, email address and mobile number to create and manage your account, including login and registration.",
                                 },
                                 {
                                     title: "Health Assessment",
-                                    desc: "We collect health-related information such as age, weight, and other relevant details to provide personalized health assessments and recommendations.",
+                                    desc: "We collect health-related information such as age, weight and other relevant details to provide personalized health assessments and recommendations.",
                                 },
                             ]}
                         />
@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
                             items={[
                                 {
                                     title: "Account Management",
-                                    desc: "Used to create and manage your user profile and communicate account-related notifications, updates, or security alerts.",
+                                    desc: "Used to create and manage your user profile and communicate account-related notifications, updates or security alerts.",
                                 },
                                 {
                                     title: "Health Assessments and Recommendations",

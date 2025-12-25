@@ -28,9 +28,13 @@ export default function HowItWorks() {
 
                 {/* Heading */}
                 <div className="text-center">
-                    <h2 className="text-2xl md:text-4xl font-bold">
-                        How It <span className="text-blue-600">Works</span>
+                    <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
+                        How It{" "}
+                        <span className="bg-gradient-to-r from-[#51C2BA] to-[#277FC2] bg-clip-text text-transparent">
+                            Works
+                        </span>
                     </h2>
+
                     <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
                         Understand your health in just a few simple steps.
                     </p>
@@ -41,15 +45,35 @@ export default function HowItWorks() {
                     {steps.map((item, index) => (
                         <div
                             key={index}
-                            className="bg-white p-6 rounded-2xl border shadow-sm text-center hover:shadow-md transition"
+                            className="
+                bg-white p-6 rounded-2xl
+                border border-gray-100
+                text-center
+                shadow-sm
+                hover:shadow-lg
+                hover:-translate-y-1
+                transition-all duration-300
+              "
                         >
-                            <div className="text-blue-600 font-bold text-3xl mb-4">
+                            {/* Step Number */}
+                            <div
+                                className="
+                  w-14 h-14 mx-auto mb-4
+                  rounded-full
+                  bg-gradient-to-br from-[#51C2BA]/15 to-[#277FC2]/15
+                  flex items-center justify-center
+                  font-bold text-lg
+                  text-[#277FC2]
+                "
+                            >
                                 {item.step}
                             </div>
-                            <h3 className="font-semibold mb-2">
+
+                            <h3 className="font-semibold text-gray-900 mb-2">
                                 {item.title}
                             </h3>
-                            <p className="text-gray-500 text-sm">
+
+                            <p className="text-gray-500 text-sm leading-relaxed">
                                 {item.desc}
                             </p>
                         </div>
