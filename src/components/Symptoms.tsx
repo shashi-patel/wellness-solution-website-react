@@ -1,20 +1,21 @@
 const symptoms = [
     {
-        title: "Select Symptoms",
-        desc: "Choose symptoms easily from a guided list.",
+        title: "Understand Your Symptoms",
+        desc: "Easily describe what you’re feeling without medical jargon.",
         icon: "🩺",
     },
     {
-        title: "Answer Questions",
-        desc: "Quick follow-up questions refine the assessment.",
-        icon: "📝",
+        title: "Clarity, Not Confusion",
+        desc: "We break down symptoms into simple, easy-to-understand insights.",
+        icon: "💡",
     },
     {
-        title: "Get Insights",
-        desc: "Instant health guidance with clear explanations.",
+        title: "Know What Matters",
+        desc: "Learn which symptoms need attention and which are usually mild.",
         icon: "📊",
     },
 ];
+
 
 export default function Symptoms() {
     return (
@@ -23,14 +24,14 @@ export default function Symptoms() {
 
                 {/* Heading */}
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
-                    Your Symptoms,{" "}
+                    Make Sense of Your{" "}
                     <span className="bg-gradient-to-r from-[#51C2BA] to-[#277FC2] bg-clip-text text-transparent">
-                        Clearly Explained
+                        Symptoms
                     </span>
                 </h2>
 
                 <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-                    Our smart symptom checker helps you understand your health step by step.
+                    Get clear, calm explanations that help you understand what your body is telling you.
                 </p>
 
                 {/* Cards */}

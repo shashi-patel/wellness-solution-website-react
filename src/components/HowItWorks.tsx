@@ -1,25 +1,26 @@
 const steps = [
     {
         step: "01",
-        title: "Choose Your Symptoms",
-        desc: "Select symptoms from a simple and guided list.",
+        title: "Input Symptoms",
+        desc: "Select relevant symptoms using a guided and structured flow.",
     },
     {
         step: "02",
-        title: "Answer Smart Questions",
-        desc: "Short questions help us understand your condition better.",
+        title: "Dynamic Questioning",
+        desc: "Adaptive questions narrow down possible conditions accurately.",
     },
     {
         step: "03",
-        title: "Get Health Insights",
-        desc: "Instant insights with clear severity levels.",
+        title: "Severity Analysis",
+        desc: "Your responses are analyzed to determine symptom severity.",
     },
     {
         step: "04",
-        title: "Take Next Steps",
-        desc: "Get guidance on what to do next or when to seek help.",
+        title: "Actionable Guidance",
+        desc: "Receive clear next steps, from self-care to seeking medical help.",
     },
 ];
+
 
 export default function HowItWorks() {
     return (
@@ -36,7 +37,7 @@ export default function HowItWorks() {
                     </h2>
 
                     <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
-                        Understand your health in just a few simple steps.
+                        A simple, intelligent process designed to give you reliable health guidance.
                     </p>
                 </div>
 
