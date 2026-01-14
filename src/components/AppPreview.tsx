@@ -65,20 +65,53 @@ export default function AppPreview() {
                 </div>
 
                 {/* Right Preview */}
-                <div className="md:w-1/2 w-full">
+                <div className="md:w-1/2 w-full flex justify-center">
+                    {/* Phone shell */}
                     <div
                         className="
-              w-full h-[260px] md:h-[340px]
-              rounded-2xl
-              bg-gradient-to-br from-[#51C2BA]/15 to-[#277FC2]/15
-              flex items-center justify-center
-              text-[#277FC2] font-semibold
-              shadow-md
-            "
+      relative
+      w-[250px] sm:w-[270px] md:w-[290px]   /* 👈 reduced */
+      aspect-[9/19.5]
+      rounded-[32px]                        /* 👈 slightly tighter */
+      bg-neutral-900
+      shadow-xl
+      ring-1 ring-white/10
+      flex items-center justify-center
+    "
                     >
-                        App / Video Preview
+                        {/* Side buttons */}
+                        <span className="absolute -left-[3px] top-[105px] h-8 w-[3px] rounded bg-neutral-700" />
+                        <span className="absolute -left-[3px] top-[145px] h-14 w-[3px] rounded bg-neutral-700" />
+                        <span className="absolute -right-[3px] top-[135px] h-16 w-[3px] rounded bg-neutral-700" />
+
+                        {/* Screen */}
+                        <div
+                            className="
+        relative
+        w-[92%]
+        h-[94%]
+        rounded-[24px]                      /* 👈 adjusted */
+        overflow-hidden
+        bg-black
+      "
+                        >
+                            {/* Status bar */}
+                            <div className="absolute top-0 left-0 right-0 h-5 bg-black/40 z-10" />
+
+                            {/* Video */}
+                            <video
+                                src="/wellness.mp4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
                 </div>
+
+
 
             </div>
         </section>

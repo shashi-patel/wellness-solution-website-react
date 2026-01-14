@@ -45,21 +45,20 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image */}
+        {/* Banner Image */}
         <div className="md:w-1/2 w-full">
-          <div
+          <img
+            src="/banner.jpg"
+            alt="App banner preview"
             className="
               w-full h-[260px] md:h-[320px]
+              object-cover
               rounded-2xl
-              bg-gradient-to-br from-[#51C2BA]/20 to-[#277FC2]/20
-              flex items-center justify-center
-              text-[#277FC2] font-semibold
               shadow-sm
             "
-          >
-            App Preview Image
-          </div>
+          />
         </div>
+
       </div>
     </section>
   );
