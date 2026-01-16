@@ -48,7 +48,7 @@ export default function Hero() {
         {/* Banner Image */}
         <div className="md:w-1/2 w-full">
           <img
-            src="/banner.jpg"
+            src="/banner.png"
             alt="App banner preview"
             className="
               w-full h-[260px] md:h-[320px]
