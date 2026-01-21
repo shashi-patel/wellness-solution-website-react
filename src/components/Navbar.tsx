@@ -9,7 +9,6 @@ export default function Navbar() {
 
     return (
         <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-100 z-50">
-            
             <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
 
                 {/* Logo */}
@@ -21,43 +20,55 @@ export default function Navbar() {
                     />
                 </Link>
 
-                {/* Desktop Menu */}
-                <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-                    {[
-                        { label: "Home", path: "/" },
-                        { label: "About", path: "/about" },
-                        { label: "Contact", path: "/contact" },
-                        { label: "Privacy", path: "/privacy-policy" },
-                    ].map(item => (
-                        <Link
-                            key={item.path}
-                            to={item.path}
-                            className={`
-                relative
-                transition
-                ${isActive(item.path)
-                                    ? "text-gray-900"
-                                    : "text-gray-600 hover:text-gray-900"
-                                }
-              `}
-                        >
-                            {item.label}
-
-                            {/* Active / hover underline */}
-                            <span
+                {/* Desktop Menu + Button */}
+                <div className="hidden md:flex items-center gap-6">
+                    <nav className="flex items-center gap-8 text-sm font-medium">
+                        {[
+                            { label: "Home", path: "/" },
+                            { label: "About", path: "/about" },
+                            { label: "Contact", path: "/contact" },
+                            { label: "Privacy", path: "/privacy-policy" },
+                        ].map((item) => (
+                            <Link
+                                key={item.path}
+                                to={item.path}
                                 className={`
-                  absolute left-0 -bottom-1 h-[2px] w-full
-                  bg-gradient-to-r from-[#51C2BA] to-[#277FC2]
-                  transition-transform origin-left
+                  relative transition
                   ${isActive(item.path)
-                                        ? "scale-x-100"
-                                        : "scale-x-0 group-hover:scale-x-100"
+                                        ? "text-gray-900"
+                                        : "text-gray-600 hover:text-gray-900"
                                     }
                 `}
-                            />
-                        </Link>
-                    ))}
-                </nav>
+                            >
+                                {item.label}
+
+                                {/* Active underline */}
+                                <span
+                                    className={`
+                    absolute left-0 -bottom-1 h-[2px] w-full
+                    bg-gradient-to-r from-[#51C2BA] to-[#277FC2]
+                    transition-transform origin-left
+                    ${isActive(item.path) ? "scale-x-100" : "scale-x-0"}
+                  `}
+                                />
+                            </Link>
+                        ))}
+                    </nav>
+
+                    {/* ✅ Book Appointment Button */}
+                    <a
+                        href="https://wellnesssolution.zohobookings.in/#/367285000000042052"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+              px-4 py-2 rounded-full text-sm font-semibold text-white
+              bg-gradient-to-r from-[#51C2BA] to-[#277FC2]
+              shadow-md hover:opacity-90 transition
+            "
+                    >
+                        Book Appointment
+                    </a>
+                </div>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -77,7 +88,7 @@ export default function Navbar() {
                         { label: "About", path: "/about" },
                         { label: "Contact", path: "/contact" },
                         { label: "Privacy", path: "/privacy-policy" },
-                    ].map(item => (
+                    ].map((item) => (
                         <Link
                             key={item.path}
                             to={item.path}
@@ -93,6 +104,21 @@ export default function Navbar() {
                             {item.label}
                         </Link>
                     ))}
+
+                    {/* ✅ Book Appointment Button - Mobile */}
+                    <a
+                        href="https://wellnesssolution.zohobookings.in/#/367285000000042052"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setOpen(false)}
+                        className="
+              block text-center mt-3 px-4 py-2 rounded-full text-sm font-semibold text-white
+              bg-gradient-to-r from-[#51C2BA] to-[#277FC2]
+              shadow-md hover:opacity-90 transition
+            "
+                    >
+                        Book Appointment
+                    </a>
                 </div>
             )}
         </header>
